@@ -7,7 +7,7 @@
 
     NSString* callbackId = [command callbackId];
     // NSString* name = [[command arguments] objectAtIndex:0];
-    NSString* msg = [NSString stringWithFormat: @"123412348273fasdfjasl42312341"];
+    NSString* msg = [NSString stringWithFormat: @"REPLACE_WITH_APPID"];
 
     CDVPluginResult* result = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK

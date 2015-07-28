@@ -7,12 +7,12 @@ import org.json.JSONException;
 public class WoronaCordova extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, CallbackContext callbackContext) throws JSONException {
 
         if (action.equals("getAppId")) {
 
             // String name = data.getString(0);
-            String message = "123412348273fasdfjasl42312341";
+            String message = "REPLACE_WITH_APPID";
             callbackContext.success(message);
 
             return true;

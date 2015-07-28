@@ -9,7 +9,7 @@ namespace Cordova.Extension.Commands
         public void getAppId(string args)
         {
             // string name = JsonHelper.Deserialize<string>(args);
-            string message = "123412348273fasdfjasl42312341";
+            string message = "REPLACE_WITH_APPID";
             PluginResult result = new PluginResult(PluginResult.Status.OK, message);
             DispatchCommandResult(result);
         }
