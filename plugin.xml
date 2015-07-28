@@ -9,9 +9,9 @@
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
 
-  <asset src="www/hello.js" target="js/hello.js"/>
+  <asset src="www/woronaCordova.js" target="js/woronaCordova.js"/>
 
-  <js-module src="www/hello.js" name="WoronaCordova">
+  <js-module src="www/woronaCordova.js" name="WoronaCordova">
     <clobbers target="WoronaCordova" />
   </js-module>
 
