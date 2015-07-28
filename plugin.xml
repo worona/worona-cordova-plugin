@@ -11,20 +11,20 @@
 
   <asset src="www/woronaCordova.js" target="js/woronaCordova.js"/>
 
-  <js-module src="www/woronaCordova.js" name="woronaCordova">
-    <clobbers target="woronaCordova" />
+  <js-module src="www/WoronaCordova.js" name="WoronaCordova">
+    <clobbers target="WoronaCordova" />
   </js-module>
 
   <platform name="android">
 
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="WoronaCordova">
-        <param name="android-package" value="org.worona.cordova.WoronaCordova"/>
-      </feature>
-    </config-file>
+   <config-file target="res/xml/config.xml" parent="/*">
+     <feature name="WoronaCordova">
+       <param name="android-package" value="WoronaCordova"/>
+     </feature>
+   </config-file>
 
-    <source-file src="src/android/WoronaCordova.java" target-dir="src/org/worona/cordova/"/>
-  </platform>
+   <source-file src="src/android/WoronaCordova.java" target-dir="src/"/>
+ </platform>
 
   <platform name="ios">
 
