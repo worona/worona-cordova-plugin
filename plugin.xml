@@ -19,27 +19,27 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="WoronaCordova">
-        <param name="android-package" value="org.worona.cordova.WoronaCordova"/>
+        <param name="android-package" value="org.worona.cordovaplugin.WoronaCordova"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/WoronaCordova.java" target-dir="src/org/worona/cordova/"/>
+    <source-file src="src/android/WoronaCordova.java" target-dir="src/org/worona/cordovaplugin/"/>
   </platform>
 
   <platform name="ios">
 
     <config-file target="config.xml" parent="/widget">
-      <feature name="Hello">
-        <param name="ios-package" value="HWPHello" />
+      <feature name="WoronaCordova">
+        <param name="ios-package" value="HWPWoronaCordova" />
       </feature>
     </config-file>
 
-    <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
-    <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
+    <header-file src="src/ios/HWPWoronaCordova.h" target-dir="WoronaCordovaPlugin"/>
+    <source-file src="src/ios/HWPWoronaCordova.m" target-dir="WoronaCordovaPlugin"/>
   </platform>
 
   <platform name="wp7">
-    <source-file src="src/wp7/Hello.cs"/>
+    <source-file src="src/wp7/WoronaCordova.cs"/>
   </platform>
 
 </plugin>
