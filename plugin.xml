@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.example.hello"
+        id="org.worona.cordova"
         version="0.7.0">
 
   <name>WoronaCordova</name>
@@ -19,11 +19,11 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="WoronaCordova">
-        <param name="android-package" value="com.example.plugin.WoronaCordova"/>
+        <param name="android-package" value="org.worona.cordova.WoronaCordova"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/WoronaCordova.java" target-dir="src/com/example/plugin/"/>
+    <source-file src="src/android/WoronaCordova.java" target-dir="src/org/worona/cordova/"/>
   </platform>
 
   <platform name="ios">

@@ -1,4 +1,4 @@
-package com.example.plugin;
+package org.worona.cordova;
 
 import org.apache.cordova.*;
 import org.json.JSONArray;
