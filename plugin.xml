@@ -14,15 +14,34 @@
       <clobbers target="navigator.appsettings" />
     </js-module>
 
-  <!-- android -->
-  <platform name="android">
-    <source-file src="src/android/AppSettings.java" target-dir="src/org/apache/cordova/appsettings" />
-  </platform>
+    <!-- android -->
+    <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="AppSettings" >
+          <param name="android-package" value="org.apache.cordova.appsettings.AppSettings"/>
+        </feature>
+        <preference name="CouchdbUrl" value="http://172.23.188.139:5900" />
+        <preference name="CouchdbPrivateUrl" value="http://172.23.188.139:5900" />
+        <preference name="TestSha" value="shashashasha" />
+      </config-file>
 
-  <!-- ios -->
-  <platform name="ios">
-    <header-file src="src/ios/AppSettings.h" />
-    <source-file src="src/ios/AppSettings.m" />
-  </platform>
+      <source-file src="src/android/AppSettings.java" target-dir="src/org/apache/cordova/appsettings" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+        <feature name="AppSettings">
+          <param name="ios-package" value="AppSettings"/>
+        </feature>
+        <preference name="CouchdbUrl" value="http://172.23.188.139:5900" />
+        <preference name="CouchdbPrivateUrl" value="http://172.23.188.139/:5900" />
+        <preference name="TestSha" value="shashashasha" />
+      </config-file>
+
+      <header-file src="src/ios/AppSettings.h" />
+      <source-file src="src/ios/AppSettings.m" />
+    </platform>
+
 
 </plugin>
