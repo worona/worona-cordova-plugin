@@ -12,8 +12,6 @@
       cordova,worona,id,name,version,description,author,config,xml
     </keywords>
 
-    <asset src="www/configReader.js" target="js/configReader.js"/>
-
     <js-module name="ConfigReader" src="www/configReader.js">
         <clobbers target="ConfigReader"/>
     </js-module>
