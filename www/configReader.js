@@ -18,4 +18,14 @@
 //   author: xml.author()
 // };
 
-module.exports = {};
+
+var config = {
+  id: "xml.packageName()",
+  version: "xml.version()",
+  name: "xml.name()",
+  description: "xml.description()",
+  author: "xml.author()"
+};
+
+
+module.exports = config;
