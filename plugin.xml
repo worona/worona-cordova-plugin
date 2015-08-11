@@ -1,45 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="org.worona.cordova"
-        version="0.7.0">
+<plugin
+  xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  id="org.worona.configreader"
+  version="1.0.0">
+    <name>Config Reader</name>
+    <description>
+      Read the config.xml info of the App and make it available in js.
+    </description>
+    <license>MIT</license>
+    <keywords>
+      cordova,worona,id,name,version,description,author,config,xml
+    </keywords>
 
-  <name>WoronaCordova</name>
+    <asset src="www/configReader.js" target="js/configReader.js"/>
 
-  <engines>
-    <engine name="cordova" version=">=3.4.0"/>
-  </engines>
+    <js-module name="ConfigReader" src="www/configReader.js">
+        <clobbers target="ConfigReader"/>
+    </js-module>
 
-  <asset src="www/woronaCordova.js" target="js/woronaCordova.js"/>
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
 
-  <js-module src="www/woronaCordova.js" name="WoronaCordova">
-    <clobbers target="WoronaCordova" />
-  </js-module>
-
-  <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="WoronaCordova">
-        <param name="android-package" value="org.worona.cordovaplugin.WoronaCordova"/>
-      </feature>
-    </config-file>
-
-    <source-file src="src/android/WoronaCordova.java" target-dir="src/org/worona/cordovaplugin/"/>
-  </platform>
-
-  <platform name="ios">
-
-    <config-file target="config.xml" parent="/widget">
-      <feature name="WoronaCordova">
-        <param name="ios-package" value="HWPWoronaCordova" />
-      </feature>
-    </config-file>
-
-    <header-file src="src/ios/HWPWoronaCordova.h" target-dir="WoronaCordovaPlugin"/>
-    <source-file src="src/ios/HWPWoronaCordova.m" target-dir="WoronaCordovaPlugin"/>
-  </platform>
-
-  <platform name="wp7">
-    <source-file src="src/wp7/WoronaCordova.cs"/>
-  </platform>
-
+    <platform name="android"/>
+    <platform name="amazon-fireos"/>
+    <platform name="ubuntu"/>
+    <platform name="ios"/>
+    <platform name="blackberry10"/>
+    <platform name="wp7"/>
+    <platform name="wp8"/>
+    <platform name="windows8"/>
+    <platform name="windows"/>
+    <platform name="browser"/>
 </plugin>
