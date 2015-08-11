@@ -10,35 +10,19 @@
     <license>Apache 2.0</license>
     <keywords>cordova,settings,appsettings</keywords>
 
-    <js-module src="www/appsettings.js" name="appsettings" />
+    <js-module src="www/appsettings.js" name="appsettings">
+      <clobbers target="navigator.appsettings" />
+    </js-module>
 
   <!-- android -->
   <platform name="android">
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="AppSettings" >
-        <param name="android-package" value="org.apache.cordova.appsettings.AppSettings"/>
-      </feature>
-      <preference name="CouchdbUrl" value="http://172.23.188.139:5900" />
-      <preference name="CouchdbPrivateUrl" value="http://172.23.188.139:5900" />
-      <preference name="TestSha" value="shashashasha" />
-    </config-file>
-    
     <source-file src="src/android/AppSettings.java" target-dir="src/org/apache/cordova/appsettings" />
   </platform>
 
   <!-- ios -->
   <platform name="ios">
-    <config-file target="config.xml" parent="/*">
-      <feature name="AppSettings">
-        <param name="ios-package" value="AppSettings"/>
-      </feature>
-      <preference name="CouchdbUrl" value="http://172.23.188.139:5900" />
-      <preference name="CouchdbPrivateUrl" value="http://172.23.188.139/:5900" />
-      <preference name="TestSha" value="shashashasha" />
-    </config-file>
-    
     <header-file src="src/ios/AppSettings.h" />
     <source-file src="src/ios/AppSettings.m" />
   </platform>
-  
+
 </plugin>
